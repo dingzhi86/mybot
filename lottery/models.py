@@ -40,7 +40,7 @@ class Rarity(models.Model):
 
 class Log(models.Model):
     qq = models.CharField("qq号", max_length=20)
-    item = models.ForeignKey('Item', db_column='', on_delete=models.PROTECT, null=False, blank=False, verbose_name="部件")
+    item = models.ForeignKey('Item', db_column='', on_delete=models.SET_NULL, null=True, blank=True, verbose_name="部件")
     time = models.DateTimeField()
 
 
